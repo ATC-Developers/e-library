@@ -21,6 +21,12 @@ Note: We are focusing on ATC students only
 
 ## Getting Started
 
+Before going ahead make sure you clone the repository and change directory to that cloned repository:
+
+`git clone https://github.com/ATC-Developers/e-library`
+
+`cd e-library`
+
 ### 1. Virtual Environments
 
 While working with python projects it is important to keep your project environment seperate from your local one. With environment we are talking about the dependencies for any particular project. We keep it seperate so that there is no conflicts, have clean project and use those packages which are required. So we start with empty environment and then we install everything from there.
@@ -35,15 +41,13 @@ Explanation:
 
 Obviously this is not the only method, there are other ways to do this so try searching for it and use that is comfortable for you.
 
-Now this command will install Virtual environment in that present directory. Now assuming that you have mvenv folder so we need to activate it. Activation is used to activate that partiuclar environment for present session. So to do that:
+Now this command will install Virtual environment in that present directory (e-library). Now assuming that you have myvenv folder so we need to activate it. Activation is used to activate that partiuclar environment for present session. So to do that:
 
 `source myvenv/bin/activate`
 
 Note: Your virtualenv file must be `myvenv`.
 
-Now as soon as you will type this, you will see that virutal env is activated as shown in picture:
-
-<picture>
+Now as soon as you will type this, you will see that virutal env is activated by showing: `(myvenv` at left hand side of your command.
 
 Now this needs to be done when you clone this repository, so that you can have all those dependencies seperate which are required by this project and have minimum error while building it.
 Try typing `pip freeze` and this will show all the dependencies which are installed on that particular virtual environment.
@@ -145,6 +149,8 @@ Final step, Run the application:
 Now you have virtual environemnt, dependencies, database so let's run it. To do that type:
 
 `python manage.py runserver`
+
+<img src="https://i.stack.imgur.com/CFCMj.png">
 
 And it should give no error. Once that is happen just go to
 
