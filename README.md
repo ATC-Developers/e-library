@@ -1,8 +1,14 @@
 ## Introduction
 
+![Heroku](https://heroku-badge.herokuapp.com/?app=acro-elibrary&root=admin&style=flat)
+
 E-Library is a project where we will be providing an interface to students so that they can view, download or upload PDF.
 
 For this we are planning to use Django 1.11 with postgreSQL without any frontend framework to keep it simple. For CSS framework we will be focusing on MaterializeCSS.
+
+Live version: [Site](http://acro-elibrary.herokuapp.com/)
+
+Note: Given site is the most recent one as it get's updated on each commit
 
 ## Contribution
 
