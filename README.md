@@ -1,6 +1,6 @@
 ## Introduction
 
-![Heroku](https://heroku-badge.herokuapp.com/?app=acro-elibrary&root=admin&style=flat)
+[![Heroku](http://heroku-badges.herokuapp.com/?app=acro-elibrary&style=flat)](http://acro-elibrary.herokuapp.com/)
 
 E-Library is a project where we will be providing an interface to students so that they can view, download or upload PDF.
 
@@ -137,6 +137,8 @@ To avoid any conflicts you can ask secret key from admin or use your own. And se
 `DATABASE_URL=postgresql://acro:password@localhost/library`
 
 If you followed the same procedure as mentioned in Database configuration section then the URL will be same just like this, else if you have choosen different username then edit those fields. Now you have everything set up.
+
+There is one more configuration which is `PRODUCTION=False`, but if you will not type anything or ignore it then also it will work fine.
 
 Note: When working in git version control system, we have one file called `.gitignore`, this tells us that what files we need to ignore when pushing the changes. So currently we add `.env` in gitignore file so that this particular file will never be uploaded in repository and by this you will avoid publishing your secrets. 
 

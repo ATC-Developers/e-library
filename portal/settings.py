@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 production = False
 
-if config('PRODUCTION').lower() == 'true':
+if config('PRODUCTION', default='False').lower() == 'true':
 	production = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
