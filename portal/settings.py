@@ -21,13 +21,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
+production = False
+
+if config('PRODUCTION').lower() == 'true':
+	production = True
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com']
 
 
 # Application definition
@@ -74,13 +79,25 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
-
+if not production:
+	DATABASES = {
+	    'default': dj_database_url.config(
+	        default=config('DATABASE_URL')
+	    )
+	}
+else:
+	DATABASES = {
+		'default': {
+        	'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        	'NAME': 'elibrary',
+        	'USER': 'name',
+        	'PASSWORD': '',
+        	'HOST': 'localhost',
+        	'PORT': '',
+    	}
+	}
+	db_from_env = dj_database_url.config(conn_max_age=500)
+	DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

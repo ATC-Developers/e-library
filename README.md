@@ -6,6 +6,8 @@ For this we are planning to use Django 1.11 with postgreSQL without any frontend
 
 ## Contribution
 
+Please follow [Contriution guidelines in detail](https://github.com/ATC-Developers/e-library/blob/master/CONTRIBUTING.md)
+
 In case if you want to contribute in this project then please follow these steps:
 
 1. Make sure that you are comfortable in coding and want to contribute something. There is no need to by shy and new comers are most welcome in this project, and we will surely guide you.
