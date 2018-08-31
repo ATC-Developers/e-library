@@ -80,12 +80,14 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 if not production:
+	print('PRODUCTION: False')
 	DATABASES = {
 	    'default': dj_database_url.config(
 	        default=config('DATABASE_URL')
 	    )
 	}
 else:
+	print('PRODUCTION: True')
 	DATABASES = {
 		'default': {
         	'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -140,6 +142,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
